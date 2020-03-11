@@ -1,0 +1,50 @@
+Options -Indexes
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+#Model
+RewriteRule ^cerrar$ model/cerrar [L]
+RewriteRule ^sesiones$ model/sesiones [L]
+
+#VistasUsuario
+RewriteRule ^inicioUsuario$ view/usuarios/index_usuario [L]
+RewriteRule ^ConsultarPDF_AyudaVisuales$ view/usuarios/cons_ayuda_visual [L]
+RewriteRule ^ConsultarPDF_AlertasCalidad$ view/usuarios/cons_alertas [L]
+RewriteRule ^ConsultarPDF_EstandaresCalidad$ view/usuarios/cons_estandares [L]
+RewriteRule ^ConsultarPDF_InstructivoTrabajo$ view/usuarios/cons_instructivo [L]
+RewriteRule ^ConsultarPDF_ReclamosClientes$ view/usuarios/cons_reclamos [L]
+RewriteRule ^Graficas$ view/usuarios/graficas/graficas [L]
+
+#VistasGraficas
+RewriteRule ^conexion_graficas$ view/usuarios/graficas/conexion_graficas
+RewriteRule ^Reportes$ view/usuarios/reportes/reporte
+RewriteRule ^ReportesDemeritos$ view/usuarios/reportes/reporte_pdf
+
+
+#VistasDemeritos
+RewriteRule ^CargarDemeritos$ view/demeritos/index_demeritos [L]
+RewriteRule ^ListaDemeritos$ view/demeritos/index [L]
+RewriteRule ^ServerDemeritos$ view/demeritos/server_process [L]
+RewriteRule ^mod_DEM$ view/admin/mod_DEM [L]
+
+#VistasAdmin
+RewriteRule ^inicioAdmin$ view/admin/index_admin [L]
+RewriteRule ^consul_admin$ view/admin/consul_admin [L]
+RewriteRule ^insertar$ view/admin/insertar [L]
+RewriteRule ^AltaPDF$ view/pdf/index_pdf [L]
+RewriteRule ^ConsultaPDF$ view/pdf/lista_pdf [L]
+RewriteRule ^consul_DEM$ view/admin/consul_DEM [L]
+RewriteRule ^insertar_DEM$ view/admin/insertar_DEM [L]
+RewriteRule ^insertar_funcion_DEM$ view/admin/insertar_funcion_DEM [L]
+
+
+#Funciones
+RewriteRule ^borrar$ view/admin/borar [L]
+RewriteRule ^insertar_funcion$ view/admin/insertar_funcion [L]
+RewriteRule ^mod_usuario$ view/admin/mod_usuario [L]
+RewriteRule ^add_info$ controller/add_info [L]
+RewriteRule ^borar_DEM$ view/admin/borar_DEM [L]
+

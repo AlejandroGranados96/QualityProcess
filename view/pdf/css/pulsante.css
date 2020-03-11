@@ -1,0 +1,32 @@
+.drag-drop:hover .pulsating {
+    animation: pulse1 1s linear infinite;
+    animation-direction: alternate ;
+    -webkit-animation: pulse1 1s linear infinite;
+    -webkit-animation-direction: alternate ;
+    }
+     
+    /* Keyframing de la animación */
+     
+    @keyframes pulse1 {
+    0% { color: rgba(225, 225, 225, .75); }
+    50% { color: rgba(225, 225, 225, 0.25); }
+    100% { color: rgba(225, 225, 225, .75); }
+    }
+     
+    @-moz-keyframes pulse1 {
+    0% { color: rgba(225, 225, 225, .75); }
+    50% { color: rgba(225, 225, 225, 0.25); }
+    100% { color: rgba(225, 225, 225, .75); }
+    }
+     
+    @-webkit-keyframes pulse1 {
+    0% { color: rgba(225, 225, 225, .75); }
+    50% { color: rgba(225, 225, 225, 0.25); }
+    100% { color: rgba(225, 225, 225, .75); }
+    }
+     
+    @-ms-keyframes pulse1 {
+    0% { color: rgba(225, 225, 225, .75); }
+    50% { color: rgba(225, 225, 225, 0.25); }
+    100% { color: rgba(225, 225, 225, .75); }
+    }
